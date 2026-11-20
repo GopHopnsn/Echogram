@@ -1,4 +1,4 @@
-name: Build Echogram APK
+name: Echogram APK
 
 on:
   workflow_dispatch:
