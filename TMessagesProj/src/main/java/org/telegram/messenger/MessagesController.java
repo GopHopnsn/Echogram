@@ -737,7 +737,7 @@ public class MessagesController extends BaseController implements NotificationCe
     public boolean starsLocked;
 
     public boolean starsPurchaseAvailable() {
-        return !starsLocked;
+        return true;
     }
     public boolean premiumFeaturesBlocked() {
         return premiumLocked && !getUserConfig().isPremium();
