@@ -822,7 +822,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         }
         StarsController.getInstance(currentAccount, true).getBalance();
         if (ApplicationLoader.isBetaBuild() || ApplicationLoader.isStandaloneBuild() || ApplicationLoader.isHuaweiStoreBuild() || (StarsController.getInstance(currentAccount, true).balanceAvailable() && (StarsController.getInstance(currentAccount, true).hasTransactions() || StarsController.getInstance(currentAccount, true).getBalance().positive()))) {
-//            final StarsController c = StarsController.getTonInstance(currentAccount);
+            final StarsController c = StarsController.getTonInstance(currentAccount);
             final long balance = c.getBalance().amount;
             items.add(SettingCell.Factory.of(13, 0xFF1BA4ED, 0xFF1488E1, R.drawable.filled_gram_earnings, getString(R.string.GramEarnings), null, c.balanceAvailable() && balance > 0 ? StarsIntroActivity.formatStarsAmount(c.getBalance(), 0.85f, ' ') : ""));
         }
